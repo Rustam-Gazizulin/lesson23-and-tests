@@ -6,7 +6,7 @@
 # чтобы наши тесты могли проверить, на самом ли деле ожидаемые ответы были
 # выведены в терминал
 
-
+#
 def arr_generator(arr):
     for item in arr:
         yield item
@@ -14,6 +14,31 @@ def arr_generator(arr):
 
 arr = [1, 2, 3, 4, 5]
 
-# it = # TODO напишите ваш код здесь
 
-# gen = # TODO напишите ваш код здесь
+def my_iter(data):
+    it = iter(data)
+    count = 0
+    while True:
+        try:
+            x = next(it)
+        except StopIteration:
+            break
+        print(x)
+        count += 1
+        if count == 3:
+            break
+
+
+my_iter(arr)
+
+def my_gen(data, count):
+    x = arr_generator(data)
+    while count > 0:
+        print(next(x))
+
+        count -= 1
+
+my_gen(arr, 3)
+
+
+

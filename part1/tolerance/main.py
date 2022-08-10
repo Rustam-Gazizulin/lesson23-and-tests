@@ -15,7 +15,7 @@ input_str = "привет чао мой друг брат товарищ зна�
 
 
 def filter_rrr(input_str):
-    pass
+     return ' '.join((word for word in input_str.split() if not 'р' in word.lower()))
     # TODO напишите свою функцию здесь
 
 

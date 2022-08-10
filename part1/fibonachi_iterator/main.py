@@ -8,15 +8,28 @@
 class Fib:
     def __init__(self, n):
         self.n = n
+        self.count = 0
+        self.fib1 = 0
+        self.fib2 = 1
         # TODO напишите Ваш код здесь
 
     def __iter__(self):
-        # TODO напишите Ваш код здесь
-        pass
+        return self
 
     def __next__(self):
         # TODO напишите Ваш код
-        pass
+        if self.n > self.count:
+            self.count += 1
+            if self.count < 3:
+                return self.count - 1
+
+            id = self.fib1 + self.fib2
+            self.fib1 = self.fib2
+            self.fib2 = id
+
+            return id
+        else:
+            raise StopIteration
 
 
 fib = Fib(15)

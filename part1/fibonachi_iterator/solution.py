@@ -23,3 +23,4 @@ class Fib:
 
 fib = Fib(15)
 result = [x for x in fib]
+print(result)

@@ -5,8 +5,18 @@
 
 
 def fib(n):
-    # TODO напишите ваш код здесь
-    pass
+    count = 0
+    fib1 = 0
+    fib2 = 1
+    while count < n:
+        count += 1
+        if count < 3:
+            yield count - 1
+            continue
+        id = fib1 + fib2
+        fib1 = fib2
+        fib2 = id
+        yield id
 
 
 fib_gen = fib(15)

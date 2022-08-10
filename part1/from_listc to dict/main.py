@@ -20,7 +20,10 @@ towns = [Town("балашиха", "мо"), Town("химки", "мо"), Town("т�
 
 
 def build_dict(towns):
-    return {t.name: t.region for t in towns}
+    res = {}
+    for t in towns:
+        res[t.name] = t.region
+    return res
 
 
 if __name__ == "__main__":

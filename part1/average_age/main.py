@@ -25,11 +25,17 @@ def calc_average_age(response_data):
     items = response_data["response"]["items"]
     cities = {}
     for item in items:
-        city_id = item["city"]["id"]
+        try:
+            city_id = item["city"]["id"]
+        except (KeyError, TypeError):
+            continue
         if city_id not in cities:
             cities[city_id] = {"title": item["city"]["title"], "count": 0, "age": 0}
         city_info = cities[city_id]
-        d, m, y = item["bdate"].split(".")
+        try:
+            d, m, y = item["bdate"].split(".")
+        except (ValueError, AttributeError):
+            continue
         d, m, y = int(d), int(m), int(y)
         td = datetime.date.today() - datetime.date(y, m, d)
         city_info["count"] += 1

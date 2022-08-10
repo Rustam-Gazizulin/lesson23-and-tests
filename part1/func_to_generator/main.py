@@ -10,13 +10,22 @@ from pathlib import Path
 
 def find(file_path, txt):
     with open(file_path) as f:
-        file_content = f.read()
-        lines = file_content.split('\n')
-        res = []
-        for line in lines:
+        while True:
+            try:
+                line = next(f)
+            except StopIteration:
+                break
             if txt in line:
-                res.append(line)
-        return res
+                yield line
+
+
+        # file_content = f.read()
+        # lines = file_content.split('\n')
+        # res = []
+        # for line in lines:
+        #     if txt in line:
+        #         res.append(line)
+        # yield res
 
 
 if __name__ == "__main__":
@@ -24,5 +33,9 @@ if __name__ == "__main__":
     path = Path(__file__).parent
     path = path.joinpath("apache_logs.txt")
     f = find(path, "image")
-    for row in f:
-        print(row)
+    print(next(f))
+    print(next(f))
+    print(next(f))
+    print(next(f))
+
+

@@ -5,9 +5,12 @@
 #         yield i**2
 
 
-new_foo = lambda x: (i**2 for i in range(x))
+def new_foo(x):
+    return list(map(lambda i: i**2, [i for i in range(x)]))
+
 
 if __name__ == "__main__":
+    print(new_foo(5))
     #  print([x for x in new_foo(5)])
-    print(list(new_foo(5)))
+
 

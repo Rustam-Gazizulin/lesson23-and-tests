@@ -20,7 +20,7 @@ towns = [Town('Балашиха', 'МО'), Town('Химки', 'МО'), Town('Т�
 
 
 def get_names(towns):
-    return list(map(lambda city: city.name, towns))
+    return list(map(lambda city: city.region if city.region == 'МО' else None, towns))
 
 
 

@@ -9,7 +9,14 @@
 # Вам дана лямбда функция foo, перепишите ее на обычную функцию.
 
 
-foo = lambda **kwargs: {v: k for k, v in kwargs.items()}
+#foo = lambda **kwargs: {v: k for k, v in kwargs.items()}
+
+def foo(**kwargs):
+    name_list = {}
+    for k, v in kwargs.items():
+        name_list[v] = k
+    return name_list
 
 if __name__ == "__main__":
+ #   print(foo(a=1, b=2))
     print(foo(a=1, b=2))

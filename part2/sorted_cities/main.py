@@ -14,12 +14,12 @@ class Town:
         return f'{self.region} - {self.name}'
 
 
-towns = [Town('Балашиха', 'МО'), Town('Химки', 'МО'), Town('Тула', 'Тульская область')]
+towns = [Town('Балашиха', 'МО'), Town('Химки', 'МО'), Town('Тула', 'Тульская область'), Town('Астра', 'ЧО'), Town('Ялта', 'ГО')]
 
  
 def sort_towns(towns):
-    # TODO напишите функцию здесь
-    pass
+    print(list(map(lambda v: v.name, towns)))
+    return sorted(map(lambda v: v.name, towns), reverse=False)
 
 
 if __name__ == "__main__":

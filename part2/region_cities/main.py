@@ -19,8 +19,10 @@ class Town:
 towns = [Town('Балашиха', 'МО'), Town('Химки', 'МО'), Town('Тула', 'Тульская область')]
 
  
+# def filter_towns(towns):
+#     return [x.name for x in filter(lambda v: v.region == 'МО', towns)]
 def filter_towns(towns):
-    return [x.name for x in filter(lambda v: v.region == 'МО', towns)]
+    return list(map(lambda c: c.name, filter(lambda v: v.region != 'МО', towns)))
 
 
 if __name__ == "__main__":

@@ -2,7 +2,7 @@ from collections import namedtuple, defaultdict
 
 Town = namedtuple('Town', ['name', 'region'])
  
-towns = [Town('балашиха', 'мо'), Town('химки', 'мо'), Town('тула', 'тульская область')]
+towns = [Town('балашиха', 'мо'), Town('химки', 'мо'), Town('тула', 'тульская область'), Town('зеленогорск', 'мо')]
 
 
 def counter(towns):

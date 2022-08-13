@@ -18,8 +18,8 @@ towns = [Town('Балашиха', 'МО'), Town('Химки', 'МО'), Town('Т�
 
  
 def sort_towns(towns):
-    print(list(map(lambda v: v.name, towns)))
-    return sorted(map(lambda v: v.name, towns), reverse=False)
+    x = map(lambda v: v.name, towns)
+    return sorted(x, reverse=False)
 
 
 if __name__ == "__main__":

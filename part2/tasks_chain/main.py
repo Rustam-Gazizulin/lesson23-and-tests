@@ -15,12 +15,11 @@ class Town:
         return f'{self.region} - {self.name}'
 
 
-towns = [Town(1, 'Балашиха', 'МО'), Town(2, 'Химки', 'МО'), Town(3, 'Тула', 'Тульская область')]
+towns = [Town(1, 'Балашиха', 'МО'), Town(2, 'Химки', 'МО'), Town(3, 'Тула', 'Тульская область'), Town(4, 'Альфа', 'МО')]
 
  
 def get_ids(towns):
-    # TODO напишите Ваш код здесь
-    pass
+    return list(map(lambda c: c.id, sorted(filter(lambda v: v.region == 'МО', towns), key=lambda v: v.name, reverse=False)))
 
 if __name__ == "__main__":
     print(get_ids(towns))

@@ -60,7 +60,7 @@ Pycharm может предложить вам сделать это после 
 - part2/foo_bar_test+
 - part2/city_expert+
 - part2/region_cities+
-- part2/sorted_cities
+- part2/sorted_cities+
 - part2/tasks_chain
 - part2/streets_numbering
 - part2/top3

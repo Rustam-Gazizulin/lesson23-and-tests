@@ -8,7 +8,7 @@ class Town:
         return f'{self.region} - {self.name}'
 
 
-towns = [Town(1, 'Балашиха', 'МО'), Town(2, 'Химки', 'МО'), Town(3, 'Тула', 'Тульская область')]
+towns = [Town(1, 'Балашиха', 'МО'), Town(2, 'Химки', 'МО'), Town(3, 'Тула', 'Тульская область'), Town(4, 'Альфа', 'МО')]
 
  
 def get_ids(towns):

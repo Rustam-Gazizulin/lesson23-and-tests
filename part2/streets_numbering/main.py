@@ -7,11 +7,11 @@
 
 
 streets = ['ленина', 'советская', 'краснооктябрьская', 'первомайская']
+#index = [1, 2, 3, 4, 5, 6, 8, 9]
 
 
 def get_tuples(input_arr):
-    # TODO напишите Ваш код здесь
-    pass
+    return list(zip(input_arr, range(1, len(input_arr) + 1)))
 
 
 if __name__ == "__main__":
